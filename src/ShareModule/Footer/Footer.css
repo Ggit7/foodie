@@ -1,0 +1,65 @@
+.main {
+    background-color: #619191;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  
+  .sub {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    margin: 0 20px;
+    /* color: aliceblue; */
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact, .social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .social {
+    align-items: center;
+    margin-bottom: 0;
+    gap:30px;
+  }
+  .social .ic :hover{
+    color: blueviolet;
+    cursor: pointer;
+  }
+
+  .cnt{
+    color:rgb(37, 23, 4);
+    font-style: italic;
+    text-decoration: underline;
+    padding-bottom: 10px;
+  }
+  .mail:hover{
+    color:rgb(189, 147, 34)
+  }
+  .phone:hover{
+    color:rgb(189, 147, 34)
+  }
+  .add,.mail,.phone{
+   display: flex;
+   padding: 5px;
+  }
+ 
+  @media only screen and (max-width: 600px) {
+    .sub {
+        flex-direction: column;
+        align-items: center; /* Center items in column direction */
+        justify-content: space-between;
+        gap:20px;
+    }
+    .social{
+      display: flex;
+      flex-direction: row;
+      gap:20px;
+    }
+  }

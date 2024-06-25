@@ -1,0 +1,34 @@
+/* ShowList.css */
+.Show_p {
+    background-image: url(../../../public/image/pexels-ella-olsson-572949-1640774.jpg);
+    display: flex;
+    flex-direction: column;
+    /* background-repeat: no-repeat; */
+    background-size: cover; 
+  }
+  
+  .card_p  {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(235, 225, 220);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 5px 5px 10px #15181d;
+  }
+  @media only screen and (max-width: 600px) {
+    
+    .card_p {
+        width: 80%; /* Take full width on smaller screens */
+        margin-top: 20px;
+    }
+    .card_p img{
+      width: 80%;
+
+    }
+}

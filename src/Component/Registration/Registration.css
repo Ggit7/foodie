@@ -1,0 +1,23 @@
+.reg{
+    display: flex;
+    flex-direction: column;
+    background-image: url(../../../public/image/log.jpg);
+    
+}
+.boxR{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    background-color:#85c6ca;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 32px;
+    border-radius: 40px;
+    box-shadow: 5px 5px 10px #5f7db1;
+}
+.boxR:hover{
+    box-shadow: 10px 10px 20px #ccc;
+}

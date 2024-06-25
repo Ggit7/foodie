@@ -1,0 +1,40 @@
+.banner {
+    background-image: url(../../../public/image/dan-gold-5O1ddenSM4g-unsplash.jpg);
+    height: 550px;
+    background-size:cover;
+    background-position: center; 
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    animation: changeImage 30s infinite;
+}
+ @keyframes changeImage {
+    0%{
+            background-image: url('../../../public/image/dan-gold-5O1ddenSM4g-unsplash.jpg');
+    }
+    25%{
+            background-image: url('../../../public/image/pexels-dapur-melodi-192125-1109197.jpg');
+    }
+    50%{
+            background-image: url('../../../public/image/pexels-ella-olsson-572949-1640774.jpg');
+    }
+    75%{
+            background-image: url('../../../public/image/brooke-lark-jUPOXXRNdcA-unsplash.jpg');
+    }
+    100%{
+            background-image: url('../../../public/image/im-121422.jpeg');
+    }
+ }
+.contant{
+    width: auto;
+    margin-left: 40px;
+}
+.banner .contant h1{
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size:50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:rgb(44, 6, 6);
+}
+
