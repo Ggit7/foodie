@@ -1,40 +1,160 @@
-.banner {
-    background-image: url(../../../public/image/dan-gold-5O1ddenSM4g-unsplash.jpg);
-    height: 550px;
-    background-size:cover;
-    background-position: center; 
-    margin-top: 0;
-    display: flex;
-    align-items: center;
-    animation: changeImage 30s infinite;
-}
- @keyframes changeImage {
-    0%{
-            background-image: url('../../../public/image/dan-gold-5O1ddenSM4g-unsplash.jpg');
-    }
-    25%{
-            background-image: url('../../../public/image/pexels-dapur-melodi-192125-1109197.jpg');
-    }
-    50%{
-            background-image: url('../../../public/image/pexels-ella-olsson-572949-1640774.jpg');
-    }
-    75%{
-            background-image: url('../../../public/image/brooke-lark-jUPOXXRNdcA-unsplash.jpg');
-    }
-    100%{
-            background-image: url('../../../public/image/im-121422.jpeg');
-    }
- }
-.contant{
-    width: auto;
-    margin-left: 40px;
-}
-.banner .contant h1{
-    justify-content: center;
-    align-items: center;
-    font-weight: bolder;
-    font-size:50px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color:rgb(44, 6, 6);
-}
 
+.ab {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 20px;
+    text-align: center;
+    background-color: rgb(226, 240, 240);
+    margin: 20px 0;
+    border-radius: 30px;
+  }
+  
+  .ab .abt {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-right: 0;
+  }
+   .ab_image img{
+    border-radius: 50px;
+    margin-left: 20px;
+  }
+/*................main slide component............*/
+.slider-container {
+    /* border-radius: 20px; */
+    /* background-color: rgb(250, 250, 250); */
+    margin: 10px 0;
+
+    .swiper-slide img {
+        width: 100%;
+        object-fit: cover;
+        margin-top: 20px;
+        border-radius: 20px;
+    }
+    
+    .slider-controler {
+        position: relative;
+        bottom: 0rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+        div {
+            cursor: pointer;
+            border: 1px solid transparent;
+            border-radius: 50%;
+            padding: 2.5px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: .3s ease;
+
+            &:hover {
+                border: 1px solid currentColor;
+                transition: .3s ease;
+            }
+        }
+    }
+}
+/*...................image slider..........*/
+.image-container {
+    position: relative;
+  }
+  
+  .hover-button {
+    opacity: 0;
+    position: absolute;
+    bottom: 100px;
+    left: 12%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .image-container:hover .hover-button {
+    opacity: 1;
+  }
+  
+  .title {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  .testimonial-slider {
+    width: 100%;
+    text-align: center;
+    padding: 16px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 10px auto;
+    background-color: #CCCCB2;
+    /* background: transparent;
+    backdrop-filter: blur(10px); */
+  }
+  
+  .testimonial-slider-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .testimonial-text {
+    width: 80%;
+    padding: 16px;
+  }
+  
+  .testimonial-button {
+    min-width: 40px;
+  }
+  .testimonial-image {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 16px;
+  }
+
+  /* Media Queries for Small Screens */
+  @media (max-width: 600px) {
+    .title,.hover-button{
+            display: none;
+    }
+    .swiper-slide img{
+        height: 100px;
+        margin:0
+    }
+    .testimonial-slider {
+        max-width: 100%;
+      }
+    
+      .testimonial-text {
+        font-size: 1rem;
+      }
+      .ab {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 20px;
+        text-align: center;
+        background-color: rgb(241, 248, 248);
+        margin: 20px 0;
+        border-radius: 30px;
+      }
+      .testimonial-slider {
+        max-width: 80%;
+      }
+    
+      .testimonial-text {
+        font-size: 1rem;
+      }
+      .title {
+        display: none;
+        
+      }
+    
+    
+  }

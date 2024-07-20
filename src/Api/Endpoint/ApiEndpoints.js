@@ -18,3 +18,6 @@ export const delete_end_point={
 export const product_update_end_point={
     Pupdate:`/product/update`,
 }
+export const profile_end_point={
+    profile:'/user/profile-details'
+}

@@ -1,7 +1,8 @@
 .add_recipe{
     display: flex;
     flex-direction: column;
-    background-image: url(../../../public/image/log.jpg);
+    background-image: url(../../../public/image/top-view-vegetables-cooked-sliced-such-as-green-bell-pepper-eggplant-red-cherry-tomatoes-inside-black-plate-dark.jpg);
+    background-size: cover;
     
 }
 .boxA{
@@ -11,14 +12,22 @@
     margin: auto;
     align-items: center;
     justify-content: center;
-    background-color:#85c6ca;
+    background-color:#e2e0dd;
     margin-top: 50px;
     margin-bottom: 50px;
+    margin-right: 80px;
     padding: 32px;
     gap: 30px;
     border-radius: 40px;
-    box-shadow: 5px 5px 10px #5f7db1;
+    box-shadow: 5px 5px 10px #212222;
 }
-.boxR:hover{
-    box-shadow: 10px 10px 20px #ccc;
+.boxA:hover{
+    box-shadow: 10px 10px 20px #352929;
+}
+@media only screen and (max-width: 600px) {
+    .boxA {
+        margin: 20px auto;
+        max-width: 90%; 
+        margin-right: 0; 
+}
 }

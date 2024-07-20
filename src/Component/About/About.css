@@ -1,64 +1,182 @@
-.about{
-    display: flex;
-    flex-direction: row;
-    gap:20px;
-    background-image: url(../../../public/image/brooke-lark-jUPOXXRNdcA-unsplash.jpg);
-    background-size: cover;
-    /* background: #aa4b6b;  /* fallback for old browsers */
-/* background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
-background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  */
-
-
+.about_intro {
+  background-image: url('../../../public/image/top-view-delicious-spaghetti-with-copy-space.jpg');
+  height: 150px;
+  background-size: cover;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 60px;
+  border-bottom-left-radius: 60px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.image{
-    width: 400px;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
+
+.about_intro h1, .about_intro h3 {
+  margin-top: 50px;
+  color: rgb(245, 245, 245);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+}
+
+.about_intro h3 {
+  margin-top: 62px;
+  padding-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .about_intro {
+    height: 120px;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+
+  .about_intro h1, .about_intro h3 {
+    margin-top: 40px;
+    font-size: 1.2rem;
+  }
+
+  .about_intro h3 {
+    margin-top: 50px;
+    padding-left: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about_intro {
+    height: 100px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+  }
+
+  .about_intro h1, .about_intro h3 {
     margin-top: 30px;
-    margin-left: 20px;
-    /* background-color: blue; */
-    
+    font-size: 1rem;
+  }
 
+  .about_intro h3 {
+    margin-top: 40px;
+    padding-left: 5px;
+  }
 }
-.image img{
-    width:400px;
-    border-radius: 20px;
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
 }
-.text{
-   width: 400px;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    align-items: center;
+
+.image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.text {
+  text-align: center;
+  color: rgb(27, 26, 26);
+  font-style: italic;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 0 20px;
+  border-radius: 5px;
+}
+
+.text h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.grid1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.sub-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.sub-grid-div img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.sub-grid-text {
+  padding: 20px;
+}
+
+.sub-grid-text h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.sub-grid-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.brand {
+  text-align: center;
+  margin-top: 40px;
+}
+
+@media (min-width: 600px) {
+  .text {
+    padding: 0 40px;
+  }
+
+  .sub-grid-text h2 {
+    font-size: 2rem;
+  }
+
+  .sub-grid-text p {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .about {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .image {
+    flex: 1;
+  }
+
+  .text {
+    flex: 2;
+    text-align: left;
+  }
+
+  .grid1 {
     justify-content: center;
-    /* background-color:#85c6ca; */
-    /* background: #aa4b6b;  
-background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
-background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  */
-background:transparent;
-    padding: 10px;
-    margin-right: 30px;
-    color:rgb(255, 255, 255);
-    font-weight: bolder;
-    font-style: italic;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    backdrop-filter: blur(3px);
-    border-radius: 20px;
-}
-@media only screen and (max-width: 600px) {
-    .about {
-        flex-direction: column;
-        align-items: center; /* Center items in column direction */
-    }
+  }
 
-    .image, .text {
-        width: 80%; /* Take full width on smaller screens */
-        margin-top: 20px;
-    }
+  .sub-grid {
+    padding: 40px;
+  }
 
-    .image img {
-        width: 100%; /* Ensure image scales with the container */
-    }
+  .sub-grid-div img {
+    max-width: 400px;
+  }
+
+  .sub-grid-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .sub-grid-text p {
+    font-size: 1.25rem;
+  }
 }

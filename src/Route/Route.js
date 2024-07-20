@@ -12,6 +12,7 @@ import { check_token,check_status } from '../Redux/AuthSlice';
 import EditRecipe from '../Curd/EditRecipe/EditRecipe';
 import SingleProduct from '../Curd/SingleProduct/SingleProduct';
 import About from '../Component/About/About';
+import Profile from '../Component/Profile/Profile';
 
 const Rout = () => {
   const dispatch = useDispatch();
@@ -32,6 +33,7 @@ const Rout = () => {
     {path:'/edit/:id' ,Component:<EditRecipe/>},
     {path:'/single/:id' ,Component:<SingleProduct/>},
     {path:'/about', Component:<About/>},
+    {path:'/profile', Component:<Profile/>},
   ];
 
   const PrivetN = ({ children }) => {

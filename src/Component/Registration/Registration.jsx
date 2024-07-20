@@ -2,7 +2,8 @@ import React,{useEffect,useState} from 'react';
 import { Box, Button, TextField, Typography } from '@mui/material';
 import { register } from '../../Redux/AuthSlice';
 import {useDispatch,useSelector}from 'react-redux'
-import {useNavigate} from'react-router-dom'
+import {useNavigate,NavLink} from'react-router-dom'
+import ForwardSharpIcon from '@mui/icons-material/ForwardSharp';
 import './Registration.css';
 
 const Registration = () => {
@@ -164,6 +165,11 @@ const Registration = () => {
           <Button onClick={submit} variant="contained" color="success" sx={{ mt: 3, borderRadius: 3 }}>
             Register
           </Button>
+          <Box display={'flex'} flexDirection={'row'} mt={2}>
+            <NavLink to={'/login'}>
+              <Button startIcon={<ForwardSharpIcon/>} >LogIn</Button>
+            </NavLink>
+          </Box>
         </Box>
       </form>
     </div>

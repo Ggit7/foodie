@@ -18,7 +18,7 @@
 }
 .nav-manu{
     list-style: none;
-    margin-top: 203px;
+    margin-top: 163px;
 
 }
 .nav-manu li{
@@ -40,6 +40,11 @@
 span{
     color:goldenrod
 }
+.nav-button{
+    cursor: pointer;
+    /* size: 20px; */
+}
+
 
 
 

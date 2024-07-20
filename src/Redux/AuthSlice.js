@@ -1,12 +1,14 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { axiosInstance } from "./Helper";
-import { reg_end_point, log_end_point } from "../Api/Endpoint/ApiEndpoints";
+import { reg_end_point, log_end_point,profile_end_point } from "../Api/Endpoint/ApiEndpoints";
 const initialState = {
   upload_status: "idle",
+  pfl:[],
   isRegistration: false,
   isLogin: false,
   redirectContact: null,
   redirectTo: null,
+  userpic:localStorage.getItem('pic')||null,
 };
 export const register = createAsyncThunk("signup", async (formData,{rejectWithValue}) => {
   const res = await axiosInstance.post(reg_end_point.registration, formData);
@@ -28,6 +30,11 @@ export const logIn = createAsyncThunk("signin", async (formData,{rejectWithValue
   }
   
 });
+export const profile_dt=createAsyncThunk('profile',async(fromData)=>{
+  const res=await axiosInstance.get(profile_end_point.profile,fromData);
+  const resData=await res?.data;
+  return resData;
+})
 export const authSlice = createSlice({
   name: "Authentication",
   initialState,
@@ -84,13 +91,25 @@ export const authSlice = createSlice({
         console.log(payload)
         localStorage.setItem("token", payload?.token);
         localStorage.setItem("Name", payload?.data?.first_name);
+        state.userpic=payload?.data?.profile_pic
+        localStorage?.setItem('pic',payload?.data?.profile_pic)
         state.isLogin = true;
 
         
       })
       .addCase(logIn.rejected, (state, { payload }) => {
         state.upload_status = "failed";
-      });
+      })
+      .addCase(profile_dt.pending,(state,{payload})=>{ 
+          state.upload_status='pending';
+      })
+      .addCase(profile_dt.fulfilled,(state,{payload})=>{ 
+        state.upload_status='succes';
+        state.pfl=payload?.data;
+    })
+    .addCase(profile_dt.rejected,(state,{payload})=>{ 
+      state.upload_status='failed';
+  })
   },
 });
 export const{

@@ -19,7 +19,6 @@ import SweetAlert from "react-bootstrap-sweetalert";
 import { Link } from "react-router-dom";
 
 import "./Show.css";
-import { BorderStyleRounded } from "@mui/icons-material";
 
 const ShowRecipe = () => {
   const dispatch = useDispatch();
@@ -53,7 +52,9 @@ const ShowRecipe = () => {
   return (
     <>
       <div className="Show_r">
+      <Grid container spacing={0.5}>
         {list?.map((item) => (
+           <Grid  item xs={12} sm={6} md={4} key={item._id}>
             <Box className="card_S">
               <Card>
               <CardHeader title={item.title} />
@@ -120,7 +121,9 @@ const ShowRecipe = () => {
                 </Box>
                 
               </Box>  
+              </Grid>
 ))}
+</Grid>
       </div>
       <Box display="flex" justifyContent="center"  bgcolor={'brown'}>
         <Pagination

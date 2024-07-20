@@ -16,7 +16,7 @@
     align-items: center;
     justify-content: center;
     background-color: rgb(235, 225, 220);
-    margin-top: 10px;
+    margin-top: 50px;
     margin-bottom: 10px;
     padding: 20px;
     border-radius: 40px;
@@ -36,8 +36,8 @@
     flex-direction: row;
     gap: 10px;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   @media only screen and (max-width: 600px) {
     .Show_r{
@@ -47,7 +47,7 @@
     
     }
     
-    .card_s,.ButtonE {
+    .card_S,.ButtonE,.card_S img{
         width: 80%; /* Take full width on smaller screens */
         margin-top: 20px;
     }

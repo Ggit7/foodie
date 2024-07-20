@@ -15,8 +15,10 @@ const AddRecipe=()=>{
       description: "",
     });
     const [image, setimage] = useState("");
+    const [imagepreview,setImagepreview]=useState('');
     const handleupload=(e)=>{
-      setimage(e.target.files[0])
+      setimage(e.target.files[0]);
+      setImagepreview(URL.createObjectURL(e.target.files[0]))
     }
     const [error, setError] = useState();
     const validation = () => {
@@ -75,8 +77,8 @@ const AddRecipe=()=>{
           <div className="add_recipe">
               <from>
                 <Box className='boxA'>
-                  <Typography>
-                    AddRecipe
+                  <Typography variant="h4" fontWeight={12}>
+                    Add Recipe
                   </Typography>
                   <TextField
                   margin="norml"
@@ -105,6 +107,11 @@ const AddRecipe=()=>{
             margin="normal"
             onChange={handleupload}
           />
+           {imagepreview && (
+              <Box margin="normal">
+                <img src={imagepreview} alt="Product" style={{ width: "100%", maxHeight: "200px", objectFit: "cover" }} />
+              </Box>
+            )}
           <Button onClick={submit} variant="contained" color="success" sx={{mt: 3,borderRadius: 3}}>submit</Button>
                 </Box>
               </from>

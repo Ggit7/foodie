@@ -18,38 +18,15 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 
 const Footer = () => {
   const handlesubmit = () => {
-    alert("massage");
+    alert("massage sent");
+    
   };
   return (
     <div>
       <Box className="main">
         <Box className="sub">
-          <Box className="message">
-            <form>
-              <TextField
-                margin="normal"
-                type="email"
-                variant="outlined"
-                placeholder="Enter your email"
-              />
-              <TextField
-                margin="normal"
-                type="text"
-                variant="outlined"
-                placeholder="Enter your message"
-              />
-            </form>
-            <Button
-              onClick={handlesubmit}
-              variant="contained"
-              color="primary"
-              startIcon={<SendIcon />}
-            >
-              Send
-            </Button>
-          </Box>
           <Box className="contact">
-            <Typography variant="h6" className="cnt">
+            <Typography variant="h4" className="cnt" sx={{color:'GrayText'}}>
               Contact Us
             </Typography>
             <Typography variant="body1" className="add">
@@ -72,15 +49,47 @@ const Footer = () => {
                  9775425851
               </Link>
             </Typography>
+            <Box className="social">
+            {/* <Typography variant="h5" color={"white"} pb={2} className="cnt">
+              Follow us
+            </Typography> */}
+            
+            <FacebookIcon sx={{fontSize: 30,color:'goldenrod',paddingLeft:2,":hover": {
+      color: 'brown'}}}/>
+            <InstagramIcon sx={{fontSize: 30,color:'goldenrod',paddingLeft:2 ,":hover": {
+      color: 'brown'}}} />
+            <TwitterIcon sx={{fontSize: 30,color:'goldenrod',paddingLeft:2, ":hover": {
+      color: 'brown'}}}/>
           </Box>
-          <Box className="social">
-            <FacebookIcon className="ic" />
-            <InstagramIcon className="ic" />
-            <TwitterIcon className="ic"/>
+          </Box>
+          <Box className="message" sx={{ p: 5, mt:1,borderRadius: 3}}>
+            <form>
+              <TextField  
+                margin="normal"
+                type="email"
+                variant="standard"
+                placeholder="Enter your email"
+              />
+              <TextField 
+                margin="normal"
+                type="text"
+                variant="standard"
+                placeholder="Enter your message"
+              />
+            </form>
+            <Button 
+              onClick={handlesubmit}
+              variant="contained"
+              color="primary"
+              startIcon={<SendIcon />}
+              sx={{mt: 1}}
+            >
+              Send
+            </Button>
           </Box>
         </Box>
         <Divider />
-        <Typography variant="h6" align="center">
+        <Typography variant="h6" align="center" sx={{color:'black'}}>
           &copy;{new Date().getFullYear()} Foodie. All rights reserved.
         </Typography>
       </Box>

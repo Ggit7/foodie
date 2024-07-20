@@ -13,8 +13,10 @@ const EditRecipe = () => {
     }, [id]);
     const { product } = useSelector((state) => state.recipe);
     const [image, setImage] = useState("");
+    const [imagepreview,setImagepreview]=useState('');
     const handleupload=(e)=>{
-      setImage(e.target.files[0])
+      setImage(e.target.files[0]);
+      setImagepreview(URL.createObjectURL(e.target.files[0]))
     }
     const [user, setUser] = useState({
       title: "",
@@ -62,8 +64,12 @@ const EditRecipe = () => {
       const formData = new FormData();
       formData.append("title", user.title);
       formData.append("description", user.description);
-      formData.append("image", image);
-      formData.append('id',id)
+      formData.append('id',id);
+      if (image) {
+        formData.append("image", image);
+      } else {
+        formData.append("image", product?.image);
+      }
       dispatch(product_update(formData)).then(()=>{
         alert('edit successfull')
         navigate("/showrecipe")
@@ -75,15 +81,14 @@ const EditRecipe = () => {
           title: product?.title,
           description: product?.description,
         });
-      //   setImage({
-      //     image : product?.image,
-      //  })
+        setImagepreview(`https://wtsacademy.dedicateddevelopers.us/uploads/product/${product?.image}`)
+        
       }
     }, [product]);
     return (
       <>
          <div className="add_recipe">
-              <from>
+              <form>
                 <Box className='boxA'>
                   <Typography>
                     AddRecipe
@@ -114,9 +119,14 @@ const EditRecipe = () => {
             margin="normal"
             onChange={handleupload}
           />
+            {imagepreview && (
+              <Box margin="normal">
+                <img src={imagepreview} alt="Product" style={{ width: "100%", maxHeight: "200px", objectFit: "cover" }} />
+              </Box>
+            )}
           <Button onClick={Submit} variant="contained" color="success" sx={{mt: 3,borderRadius: 3}}>submit</Button>
                 </Box>
-              </from>
+              </form>
           </div>
       </>
     );

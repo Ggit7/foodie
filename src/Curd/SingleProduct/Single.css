@@ -15,7 +15,7 @@
     align-items: center;
     justify-content: center;
     background-color: rgb(235, 225, 220);
-    margin-top: 20px;
+    margin-top: 50px;
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 40px;
@@ -24,7 +24,7 @@
   @media only screen and (max-width: 600px) {
     
     .card_p {
-        width: 80%; /* Take full width on smaller screens */
+        width: 80%;
         margin-top: 20px;
     }
     .card_p img{
