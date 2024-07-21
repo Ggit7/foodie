@@ -82,7 +82,7 @@ const Footer = () => {
         </Box>
       </Box>
       <Box className="footer-bottom">
-        <Typography variant="body2">©foodie. All rights reserved.</Typography>
+        <Typography variant="h5">©foodie. All rights reserved.</Typography>
       </Box>
     </Box>
   );
