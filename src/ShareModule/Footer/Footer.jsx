@@ -1,99 +1,90 @@
+// src/Footer.js
 import React from "react";
+import { Box, Grid, Link, Typography, IconButton } from "@mui/material";
 import {
-  Box,
-  TextField,
-  Typography,
-  Divider,
-  Button,
-  Link,
-} from "@mui/material";
+  Facebook,
+  RssFeed,
+  Twitter,
+  LinkedIn,
+  Pinterest,
+} from "@mui/icons-material";
 import "./Footer.css";
-import SendIcon from "@mui/icons-material/Send";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import PhoneIcon from "@mui/icons-material/Phone";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import InstagramIcon from "@mui/icons-material/Instagram";
 
 const Footer = () => {
-  const handlesubmit = () => {
-    alert("massage sent");
-    
-  };
   return (
-    <div>
-      <Box className="main">
-        <Box className="sub">
-          <Box className="contact">
-            <Typography variant="h4" className="cnt" sx={{color:'GrayText'}}>
-              Contact Us
-            </Typography>
-            <Typography variant="body1" className="add">
-                <LocationOnIcon sx={{ mr: 1 }} color={"black"}/>
-              123 Foodie Street, Kolkata city of joy, kol-743363
-            </Typography>
-            <Typography variant="body1" className="mail">
-                <MailOutlineIcon sx={{ mr: 1 }} color={"black"} />
-              <Link
-                href="mailto:gourab.biit@gmail.com"
-                color="inherit"
-                underline="none"
-              >
-                contact@foodie.com
-              </Link>
-            </Typography>
-            <Typography variant="body1" className="phone">
-                <PhoneIcon sx={{ mr: 1 }} color={"black"}/>
-              <Link href="tel:+919775425851" color="inherit" underline="none">
-                 9775425851
-              </Link>
-            </Typography>
-            <Box className="social">
-            {/* <Typography variant="h5" color={"white"} pb={2} className="cnt">
-              Follow us
-            </Typography> */}
-            
-            <FacebookIcon sx={{fontSize: 30,color:'goldenrod',paddingLeft:2,":hover": {
-      color: 'brown'}}}/>
-            <InstagramIcon sx={{fontSize: 30,color:'goldenrod',paddingLeft:2 ,":hover": {
-      color: 'brown'}}} />
-            <TwitterIcon sx={{fontSize: 30,color:'goldenrod',paddingLeft:2, ":hover": {
-      color: 'brown'}}}/>
-          </Box>
-          </Box>
-          <Box className="message" sx={{ p: 5, mt:1,borderRadius: 3}}>
-            <form>
-              <TextField  
-                margin="normal"
-                type="email"
-                variant="standard"
-                placeholder="Enter your email"
-              />
-              <TextField 
-                margin="normal"
-                type="text"
-                variant="standard"
-                placeholder="Enter your message"
-              />
-            </form>
-            <Button 
-              onClick={handlesubmit}
-              variant="contained"
-              color="primary"
-              startIcon={<SendIcon />}
-              sx={{mt: 1}}
+    <Box className="footer">
+      <Box className="footer-container">
+        <Box className="footer-userlink">
+          <Typography variant="h6">Quick Links</Typography>
+          <br />
+          <Link href="/contact" color={"inherit"} underline="none">
+            Contact
+          </Link>
+          <br />
+          <Link href="/" color={"inherit"} underline="none">
+            over view
+          </Link>
+          <br />
+          <Link href="/showrecipe" color={"inherit"} underline="none">
+            Recipe
+          </Link>
+        </Box>
+        <Box className="footer-contact-info">
+          <Typography variant="h6">Contact info</Typography>
+          <Typography variant="body2" >
+            <strong>Address:</strong>{" "}123 Foodie Street, Kolkata city of joy,
+            kol-743363
+          </Typography>
+          <Typography variant="body2" className='a'>
+            <strong>Phone:</strong>{" "}
+            <Link href="tel:+919775425851" color="inherit" underline="none">
+              9775425851
+            </Link>
+          </Typography>
+          <Typography variant="body2" className='a'>
+            <strong>Email:</strong>{" "}
+            <Link
+              href="mailto:gourab.biit@gmail.com"
+              color="inherit"
+              underline="none"
             >
-              Send
-            </Button>
+              contact@foodie.com
+            </Link>
+          </Typography>
+        </Box>
+        <Box className="footer-description">
+          <Typography variant="h5" className="footer-logo">
+            foodie
+          </Typography>
+          <Typography variant="body2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </Typography>
+          <Box className="footer-social-icons">
+            <IconButton href="#" color="inherit">
+              <Facebook />
+            </IconButton>
+            <IconButton href="#" color="inherit">
+              <Twitter />
+            </IconButton>
+            <IconButton href="#" color="inherit">
+              <LinkedIn />
+            </IconButton>
+            <IconButton href="#" color="inherit">
+              <Pinterest />
+            </IconButton>
+            <IconButton href="#" color="inherit">
+              <RssFeed />
+            </IconButton>
           </Box>
         </Box>
-        <Divider />
-        <Typography variant="h6" align="center" sx={{color:'black'}}>
-          &copy;{new Date().getFullYear()} Foodie. All rights reserved.
-        </Typography>
       </Box>
-    </div>
+      <Box className="footer-bottom">
+        <Typography variant="body2">©foodie. All rights reserved.</Typography>
+      </Box>
+    </Box>
   );
 };
 

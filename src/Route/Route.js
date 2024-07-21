@@ -13,6 +13,7 @@ import EditRecipe from '../Curd/EditRecipe/EditRecipe';
 import SingleProduct from '../Curd/SingleProduct/SingleProduct';
 import About from '../Component/About/About';
 import Profile from '../Component/Profile/Profile';
+import ContactPage from '../Component/Contact/Contact';
 
 const Rout = () => {
   const dispatch = useDispatch();
@@ -34,6 +35,7 @@ const Rout = () => {
     {path:'/single/:id' ,Component:<SingleProduct/>},
     {path:'/about', Component:<About/>},
     {path:'/profile', Component:<Profile/>},
+    {path:'/contact', Component:<ContactPage/>}
   ];
 
   const PrivetN = ({ children }) => {

@@ -82,6 +82,11 @@ const Headder = () => {
               <a className="nav-link">Showrecipe</a>
             </NavLink>
           </li>
+          <li>
+            <NavLink to={"/contact"}>
+              <a className="nav-link">Contact</a>
+            </NavLink>
+          </li>
           <li className="nav_button">
             {isLogin ? (
               <Button
@@ -143,6 +148,11 @@ const Headder = () => {
                 <li>
                   <NavLink to={"/showrecipe"}>
                     <a className="nav-link">Showrecipe</a>
+                  </NavLink>
+                </li>
+                <li>
+                <NavLink to={"/contact"}>
+                    <a className="nav-link">Contact</a>
                   </NavLink>
                 </li>
                 <span>{isLogin ? `Hello:  ${is_login}` : ""}</span>
