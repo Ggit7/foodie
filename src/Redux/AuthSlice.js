@@ -75,7 +75,7 @@ export const authSlice = createSlice({
       })
       .addCase(register.fulfilled, (state, { payload }) => {
         state.upload_status = "success";
-        localStorage.setItem("name", payload?.data?.name);
+        localStorage.setItem("name", payload?.data?.first_name);
         state.redirectContact='/login'
         state.isRegistration = true;
        
