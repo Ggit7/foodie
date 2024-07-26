@@ -248,7 +248,7 @@ const Headder = () => {
                 color: "white",
                 bgcolor: "black",
                 "&:hover": {
-                  bgcolor: "gold",
+                  color: "gold",
                 },
               }}
             >
