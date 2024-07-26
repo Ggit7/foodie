@@ -96,6 +96,8 @@ const ShowRecipe = () => {
                     title="Are you sure?"
                     onConfirm={handledelete}
                     onCancel={() => setIsdelete(false)}
+                    confirmBtnStyle={{ backgroundColor: "blue",color: "#fff",textDecoration:"none", border: "none", padding: "10px 20px", borderRadius: "5px" }}
+                    cancelBtnStyle={{ backgroundColor: "#f44336", color: "#fff", textDecoration:"none", border: "none", padding: "10px 20px", borderRadius: "5px" }}
                     focusCancelBtn
                   >
                     You will not be able to recover this imaginary file!

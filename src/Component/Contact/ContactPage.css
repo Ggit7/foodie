@@ -30,7 +30,6 @@
   }
   @media (max-width: 600px) {
     .contact-header {
-      height: 200px;
+      height: 100px;
     }
   }
-    

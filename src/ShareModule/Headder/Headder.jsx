@@ -14,6 +14,7 @@ import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import { NavLink, useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
 import { useSelector, useDispatch } from "react-redux";
+import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
 import { handlelogout, handleRedirectContact ,profile_dt} from "../../Redux/AuthSlice";
 import "./Headder.css";
 const Headder = () => {
@@ -46,7 +47,7 @@ const Headder = () => {
   }, []);
 
   const drawer = (
-    <Box onClick={handlechange} sx={{ textAlign: "center" }}>
+    <Box onClick={handlechange}sx={{ textAlign: "center" }}>
       <Typography
         sx={{ color: "gold", fontSize: "25px", bgcolor: "black", p: 0.8 }}
       >
@@ -120,7 +121,7 @@ const Headder = () => {
               color="inherit"
               aria-label="open-drawer"
               edge="start"
-              sx={{ display: { sm: "none" }, mr: 2 }}
+              sx={{ display: {xs:'block',sm:'block',md:'none',lg:'none'}, mr: 2 }}
               onClick={handlechange}
             >
               <MenuOpenIcon />
@@ -128,7 +129,7 @@ const Headder = () => {
             <Typography sx={{ color: "gold", fontSize: "30px" }}>
               foodie
             </Typography>
-            <Box sx={{ display: { xs: "none", sm: "block" }, ml: "auto" }}>
+            <Box sx={{ display: { xs: "none", sm: "none",md:'block',lg:'block' }, ml: "auto" }}>
               <ul className="nav-item">
                 <li>
                   <NavLink to={"/"}>
@@ -220,17 +221,41 @@ const Headder = () => {
           <Drawer
             variant="temporary"
             open={menuopen}
-            onClose={handlechange}
+            // onClose={handlechange}
             sx={{
-              display: { xs: "block", sm: "none" },
+              display: { xs: "block", sm: "block" ,md:'none',lg:'none'},
               "& .MuiDrawer-paper": {
                 boxSizing: "border-box",
                 width: "190px",
               },
             }}
           >
+           
             {drawer}
           </Drawer>
+          {menuopen && (
+          <Box
+            sx={{
+              position: "fixed",
+              top: 7,
+              left: 200,
+              zIndex: 1300, 
+            }}
+          >
+            <IconButton
+              onClick={handlechange}
+              sx={{
+                color: "white",
+                bgcolor: "black",
+                "&:hover": {
+                  bgcolor: "gold",
+                },
+              }}
+            >
+              <RestaurantMenuIcon />
+            </IconButton>
+          </Box>
+        )}
         </Box>
         <Toolbar />
       </Box>
