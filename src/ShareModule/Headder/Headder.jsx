@@ -129,7 +129,7 @@ const Headder = () => {
             <Typography sx={{ color: "gold", fontSize: "30px" }}>
               foodie
             </Typography>
-            <Box sx={{ display: { xs: "none", sm: "none",md:'block',lg:'block' }, ml: "auto" }}>
+            <Box sx={{ display: { xs: "none", sm: "none" ,md:'block',lg:'block'}, ml: "auto" }}>
               <ul className="nav-item">
                 <li>
                   <NavLink to={"/"}>
@@ -223,7 +223,7 @@ const Headder = () => {
             open={menuopen}
             // onClose={handlechange}
             sx={{
-              display: { xs: "block", sm: "block" ,md:'none',lg:'none'},
+              display: { xs: "block", sm: "block",md:'none' ,lg:'none'},
               "& .MuiDrawer-paper": {
                 boxSizing: "border-box",
                 width: "190px",

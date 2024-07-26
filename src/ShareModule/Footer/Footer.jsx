@@ -15,8 +15,7 @@ const Footer = () => {
     <Box className="footer">
       <Box className="footer-container">
         <Box className="footer-userlink">
-          <Typography variant="h6">Quick Links</Typography>
-          <br />
+          <Typography variant="h6" sx={{pb:1}}>Quick Links</Typography>
           <Link href="/contact" color={"inherit"} underline="none">
             Contact
           </Link>
@@ -53,7 +52,7 @@ const Footer = () => {
           </Typography>
         </Box>
         <Box className="footer-description">
-          <Typography variant="h5" className="footer-logo">
+          <Typography variant="h5" className="footer-logo" sx={{pb:1}}>
             foodie
           </Typography>
           <Typography variant="body2">
@@ -62,7 +61,7 @@ const Footer = () => {
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </Typography>
-          <Box className="footer-social-icons">
+          <Box className="footer-social-icons" sx={{pt:1}}>
             <IconButton href="#" color="inherit">
               <Facebook />
             </IconButton>
