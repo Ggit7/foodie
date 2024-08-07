@@ -32,5 +32,6 @@
     .boxL{
         margin: 40px auto;
         background-color:rgb(226, 204, 204);
+        background: transparent;
     }
 }

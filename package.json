@@ -28,7 +28,8 @@
     "sweetalert": "^2.1.2",
     "sweetalert2": "^10.3.5",
     "swiper": "^11.1.5",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yap": "^0.0.2"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -15,7 +15,7 @@ export const register = createAsyncThunk("signup", async (formData,{rejectWithVa
  if(res.status===200){
   return res?.data
  }else{
-  alert('invalid registration')
+  alert(res.data.message)
   return rejectWithValue()
  }
 });
@@ -25,7 +25,7 @@ export const logIn = createAsyncThunk("signin", async (formData,{rejectWithValue
     return res?.data
   }
   else{
-    alert('invalid login')
+    alert(res.data.message)
     return rejectWithValue()
   }
   
